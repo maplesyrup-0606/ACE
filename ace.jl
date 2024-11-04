@@ -15,9 +15,14 @@ function chebyshev_test1!(X::AbstractVector{<:Real}, K::Integer)
    if K > 1
       T[:, 2] .= X
    end
+
+   two_X = 2 .* X
+
    # version 1
    @inbounds for k in 3:K 
-      T[:, k] .= 2 .* X .* T[:, k - 1] .- T[:, k - 2] # parallelizing across k isn't possible since we need the previous iterations
+      @simd for i in 1:N
+         T[i, k] = two_X[i] * T[i, k - 1] - T[i, k - 2]
+      end
    end
    
    return T

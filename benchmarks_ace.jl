@@ -17,8 +17,8 @@ N = 100
 Np = 10
 r = 2*rand(N) .- 1
 
-chebyshev_test1!(r,Np);
+# chebyshev_test1!(r,Np);
 
 
-@btime chebyshev_test1!($r,$Np); 
+# @btime chebyshev_test1!($r,$Np); 
 display(@benchmark chebyshev_test1!($r,$Np)); 
