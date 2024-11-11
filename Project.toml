@@ -1,5 +1,7 @@
 [deps]
 BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
+CUDA = "052768ef-5323-5732-b1bb-66c8b64840ba"
+KernelAbstractions = "63c18a36-062a-441e-b654-da1e3ab1ce7c"
 LuxCore = "bb33d45b-7691-41d6-9220-0943567d0623"
 Polynomials4ML = "03c4bcba-a943-47e9-bfa1-b1661fc2974f"
 Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
